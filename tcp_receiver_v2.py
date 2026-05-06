@@ -5,8 +5,8 @@ Python rewrite of tcpreceiver.java.
 
 TCP server that receives binary burst data from ICPDAS WP-8121 PAC controllers
 and saves them to binary files. Source is identified by client IP address:
-  - 192.168.1.12 -> machine_B (vibration / accelerometer)
-  - 192.168.1.13 -> machine_A (voltage / current)
+  - 192.168.1.12 -> machine1 (vibration / accelerometer)
+  - 192.168.1.13 -> machine2 (voltage / current)
 
 Each burst is saved with a timestamp-based filename (never overwritten):
   data/<machine>/<machine>_YYYYMMDD_HHMMSS_ffffff.bin
@@ -26,8 +26,8 @@ OUT_DIR = Path(r"C:\Users\USER\Desktop\data")
 
 # Map source IP -> machine label (folder name)
 IP_TO_MACHINE: dict[str, str] = {
-    "192.168.1.12": "machine_B",   # vibration / accelerometer
-    "192.168.1.13": "machine_A",   # voltage / current
+    "192.168.1.12": "machine1",   # vibration / accelerometer
+    "192.168.1.13": "machine2",   # voltage / current
 }
 DEFAULT_MACHINE = "unknown"
 
