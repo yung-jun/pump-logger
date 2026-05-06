@@ -1,0 +1,37 @@
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# ── Virtual environment ────────────────────────────
+venv/
+.venv/
+env/
+
+# ── IDE / OS ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── 執行期輸出 ──────────────────────────────────────
+# OUT_BASE 預設指向 C:\Users\USER\Desktop\data\，本來就不在 repo 內；
+# 此處保留 data/ 規則純粹防止使用者把 OUT_BASE 改到 repo 子目錄時誤 commit
+data/
+*.log
+
+# ── 分析過程的暫時備份檔 ─────────────────────────
+*.bak
+*_OLDMAP.csv
+*_OLDSPLIT.csv
+low_freq_sensor_8ch.csv
+
+# ── Claude Code 本機設定 (專案層) ───────────────────
+.claude/settings.local.json
